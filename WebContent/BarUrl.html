@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="Styles/default/easyui.css" />
+<link rel="stylesheet" type="text/css" href="Styles/icon.css" />
+<script type="text/javascript" src="Scripts/jquery.js"></script>
+<script type="text/javascript" src="Scripts/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="Scripts/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="Scripts/query.barurl.js"></script>
+<style type="text/css">
+#divHead {
+	padding: 5px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	vertical-align: middle;
+}
+#stable td{padding:3px;}
+.tdl{text-align:right;}
+.tdr{text-align:left;}
+</style>
+</head>
+<body class="easyui-layout" style="overflow-y: hidden" scroll="no"
+	split="false">
+	<div region="north"
+		style="padding: 5px; width: 99%; text-align: center; overflow-y: hidden"
+		border="false" split="false">
+
+		<table id="stable" style="width: 900; margin-left: auto; margin-right: auto;"
+			cellspacing="0">
+			<tr>
+				<td class="tdl">广告:</td>
+				<td class="tdr"><input class="easyui-combobox" id="ccAD" /></td>
+				<td class="tdl">开始:</td>
+				<td class="tdr"><input id="dateStart" class="easyui-datebox" ></input></td>
+				<td class="tdl">结束:</td>
+				<td class="tdr"><input id="dateEnd" class="easyui-datebox" ></input></td>
+				<td class="tdl"></td>
+				<td class="tdr"></td>
+			</tr>
+			<tr>
+				<td class="tdl">地市:</td>
+				<td class="tdr"><input class="easyui-combobox" id="ccArea" /></td>
+				<td class="tdl">分区:</td>
+				<td class="tdr"><input class="easyui-combobox" id="ccSubArea" /></td>
+				<td class="tdl">派出所:</td>
+				<td class="tdr"><input class="easyui-combobox" id="ccPS" /></td>
+				<td class="tdl">网吧:</td>
+				<td class="tdr"><input class="easyui-combobox" id="ccNetbar" /></td>
+			</tr>
+			<tr>
+				<td colspan="8"><a id="btnQuery" class="easyui-linkbutton"
+					icon="icon-search" href="javascript:void(0)"> 查询</a></td>
+			</tr>
+		</table>
+	</div>
+	<div region="center" style="padding: 1px; overflow-y: hidden"
+		border="false" split="false">
+		<table id="grid">
+		</table>
+	</div>
+</body>
+</html>

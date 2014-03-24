@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>网吧统计</title>
+<link rel="stylesheet" type="text/css" href="Styles/default/easyui.css" />
+<link rel="stylesheet" type="text/css" href="Styles/icon.css" />
+<script type="text/javascript" src="Scripts/jquery.js"></script>
+<script type="text/javascript" src="Scripts/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="Scripts/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="Scripts/query.bar.js"></script>
+<script type="text/javascript" src="Scripts/stupidtable.min.js?dev"></script>
+<style type="text/css">
+body {
+	margin: 3px;
+}
+#divHead {
+    font-size:18px;
+	padding: 2px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#queryRecords {
+	margin: 3px 0;
+	padding-bottom: 5px;
+}
+
+#queryTable {
+	border-collapse: collapse;
+	width: 99%;
+	margin: 0 auto;
+}
+
+#queryTable,#queryTable th,#queryTable td {
+	border: 1px solid #8DB2E3;
+}
+
+#queryTable th,#queryTable td {
+	height: 22px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#queryTable th {
+	background: #E0ECFF;
+	color: #15428B;
+}
+
+th[data-sort] {
+	cursor: pointer;
+}
+
+#stable td {
+	padding: 3px;
+}
+
+.tdl {
+	text-align: right;
+}
+
+.tdr {
+	text-align: left;
+}
+input {
+	width: 125px;
+}
+
+</style>
+</head>
+<body>
+	<div id="divHead">
+		<table id="stable"
+			style="width: 900; margin-left: auto; margin-right: auto;"
+			cellspacing="0">
+			<tr>
+				<td class="tdl">地  &nbsp;市:</td>
+				<td class="tdr"><input class="easyui-combobox" id="ccArea" /></td>
+				<td class="tdl">辖区:</td>
+				<td class="tdr"><input class="easyui-combobox" id="ccSubArea" /></td>				
+				
+				<td class="tdl">网吧名:</td>
+				<td class="tdr"><input id="barName"></input></td>
+			</tr>
+			<tr><td class="tdl">网吧号</td>
+				<td class="tdr"><input id="barNo"></input></td>
+				<td class="tdl">开始:</td>
+				<td class="tdr"><input id="dateStart" class="easyui-datebox" style="width:133px;"></input></td>
+				<td class="tdl">结&nbsp;&nbsp;束:</td>
+				<td class="tdr"><input id="dateEnd" class="easyui-datebox" style="width:133px;"></input></td>
+			</tr>
+			<tr>
+				<td colspan="8"><a id="btnQuery" class="easyui-linkbutton"
+					icon="icon-search" href="javascript:void(0)"> 查询</a></td>
+			</tr>
+		</table>
+	</div>
+	<div id="queryRecords"></div>
+</body>
+</html>
